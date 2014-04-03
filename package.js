@@ -11,9 +11,9 @@ Package._transitional_registerBuildPlugin({
   npmDependencies: {"wisp": "0.9.0-beta3"}
 });
 
-Npm.depends({"wisp": "0.9.0-beta3"});
-
 Package.on_use(function (api) {
+  Npm.depends({"wisp": "0.9.0-beta3"});
+
   api.add_files(['wispNamespace.js'], ['client', 'server']);
   api.export(['__wisp__'], ['client', 'server']);
 });
